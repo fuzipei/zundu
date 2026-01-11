@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>GitHub æä»¶å é</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            /* Matches the pink-to-yellow gradient background from the image */
+            background: linear-gradient(135deg, #F8BBD0, #FFE0B2, #FFF9C4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            /* White, rounded, semi-transparent card style */
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 40px 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #333;
+            font-weight: bold;
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .input-group {
+            position: relative;
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        .url {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 16px;
+            border: 2px solid #E0E0E0;
+            border-radius: 12px; /* Rounded corners for input */
+            outline: none;
+            transition: border-color 0.3s;
+            background-color: #FAFAFA;
+            box-sizing: border-box;
+        }
+
+        .url:focus {
+            /* Purple focus color */
+            border-color: #9C27B0;
+        }
+
+        .btn {
+            /* Purple/Pink gradient button */
+            background: linear-gradient(to right, #AB47BC, #7B1FA2);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            padding: 15px 40px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(156, 39, 176, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(156, 39, 176, 0.4);
+        }
+
+        .info-section {
+            text-align: left;
+            margin-top: 30px;
+            color: #757575;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .tips, .example {
+            margin-bottom: 20px;
+        }
+
+        .tips p, .example p {
+            margin: 5px 0;
+        }
+        
+        .tips > p:first-child::before {
+            content: 'PSï¼';
+            font-weight: bold;
+            color: #9C27B0;
+        }
+
+        .example > p:first-child::before {
+            content: 'åæ³è¾å¥ç¤ºä¾ï¼';
+            font-weight: bold;
+            color: #9C27B0;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 13px;
+            color: #9E9E9E;
+        }
+
+        .footer a {
+            color: #9C27B0;
+            text-decoration: none;
+            font-weight: 500;
+        }
+    </style>
+    <script>
+        function toSubmit(e) {
+            e.preventDefault()
+            window.open(location.href.substr(0, location.href.lastIndexOf('/') + 1) + document.getElementsByName('q')[0].value);
+            return false
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <h1>GitHub æä»¶å é</h1>
+    <form action="./" method="get" target="_blank" onsubmit="toSubmit(event)">
+        <div class="input-group">
+            <input class="url" name="q" type="text" placeholder="é®å¥Githubæä»¶é¾æ¥"
+                   pattern="^((https|http):\/\/)?(github\.com\/.+?\/.+?\/(?:releases|archive|blob|raw|suites)|((?:raw|gist)\.(?:githubusercontent|github)\.com))\/.+$" required>
+        </div>
+        <input class="btn" type="submit" value="ä¸è½½">
+    </form>
+
+    <div class="info-section">
+        <div class="tips">
+            <p>GitHubæä»¶é¾æ¥å¸¦ä¸å¸¦åè®®å¤´é½å¯ä»¥ï¼æ¯æreleaseãarchiveä»¥åæä»¶ï¼å³é®å¤å¶åºæ¥çé¾æ¥é½æ¯ç¬¦åæ åçã</p>
+            <p>releaseãarchiveä½¿ç¨cfå éï¼æä»¶ä¼è·³è½¬è³JsDelivr</p>
+            <p>æ³¨æï¼ä¸æ¯æé¡¹ç®æä»¶å¤¹</p>
+        </div>
+        <div class="example">
+            <p>gitå½ä»¤è°ç¨ï¼git clone https://gh.arui.de5.net/https://github.com/arui/project.git
+            <p>åæ¯æºç ï¼https://github.com/arui/project/archive/master.zip</p>
+            <p>releaseæºç ï¼https://github.com/arui/project/archive/v0.1.0.tar.gz</p>
+            <p>releaseæä»¶ï¼https://github.com/arui/project/releases/download/v0.1.0/example.zip</p>
+            <p>åæ¯æä»¶ï¼https://github.com/arui/project/blob/master/filename</p>
+        </div>
+    </div>
+    <p class="footer">é¡¹ç®åºäºEdgeone Pagesï¼æºä½è <a href="https://github.com/hunshcn/gh-proxy">hunshcn/gh-proxy</a></p>
+</div>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"25647704b9e04a969815e396d00ce117","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

@@ -34,8 +34,8 @@
 										className: "underline",
 										target: "_blank",
 										href: "https://github.com/fuzipei/zundu",
-										children: "zdjd"
-									}), "的源代码,原作者SnailSword", (0, l.jsx)("br", {}), "bug反馈请联系", (0, l.jsx)("a", {
+										children: "仅供学习使用"
+									}), ",原作者SnailSword", (0, l.jsx)("br", {}), "bug反馈请联系", (0, l.jsx)("a", {
 										className: "underline",
 										target: "_blank",
 										href: "mailto:help@richedev.cn",
