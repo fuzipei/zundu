@@ -1,166 +1,127 @@
-(self.webpackChunk_N_E = self.webpackChunk_N_E || [])
-.push([
-	[931], {
-		6012: function(e, s, t) {
-			Promise.resolve()
-				.then(t.bind(t, 7151))
-		},
-		7151: function(e, s, t) {
-			"use strict";
-			t.r(s);
-			var l = t(7437),
-				a = t(2265),
-				r = t(5151),
-				n = t(2390),
-				c = t.n(n);
-			s.default = () => {
-				let [e, s] = (0, a.useState)(""), [t, n] = (0, a.useState)(""), [o, i] = (0, a.useState)(!0), [d, m] = (0, a.useState)(!1), [u, x] = (0, a.useState)(!1), h = () => {
-					n(""), s(""), m(!1), x(!1)
-				};
-				return (0, l.jsx)("div", {
-					className: "min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8",
-					children: (0, l.jsxs)("div", {
-						className: "sm:mx-auto sm:w-full sm:max-w-md",
-						children: [(0, l.jsx)("h1", {
-							className: "text-3xl font-bold text-center",
-							children: "尊嘟假嘟翻译器O.o"
-						}), (0, l.jsx)("div", {
-							className: "bg-white py-8 px-4 shadow-lg sm:rounded-lg sm:px-10 m-2",
-							children: (0, l.jsxs)("div", {
-								className: "space-y-6",
-								children: [(0, l.jsxs)("p", {
-									className: "text-gray-500 text-sm",
-									children: ["这是一个尊嘟语和人语互相翻译的工具。可以把翻译出的尊嘟语发给你不好好说话的朋友。", (0, l.jsx)("br", {}), "本工具为", (0, l.jsx)("a", {
-										className: "underline",
-										target: "_blank",
-										href: "https://github.com/fuzipei/zundu",
-										children: "zdjd"
-									}), "的源代码,原作者SnailSword", (0, l.jsx)("br", {}), "bug反馈请联系", (0, l.jsx)("a", {
-										className: "underline",
-										target: "_blank",
-										href: "mailto:help@richedev.cn",
-										children: "help@richedev.cn"
-									}), "。"]
-								}), (0, l.jsxs)("div", {
-									className: "space-y-2",
-									children: [(0, l.jsx)("label", {
-										htmlFor: "selectLanguage",
-										className: "block text-sm font-medium text-gray-700",
-										children: "翻译为"
-									}), (0, l.jsxs)("div", {
-										className: "flex items-center space-x-4",
-										children: [(0, l.jsxs)("label", {
-											htmlFor: "human",
-											className: "inline-flex items-center",
-											children: [(0, l.jsx)("input", {
-												id: "human",
-												type: "radio",
-												className: "h-4 w-4 text-blue-600",
-												name: "language",
-												value: "human",
-												checked: !o,
-												onChange: () => {
-													i(!1), h()
-												}
-											}), (0, l.jsx)("span", {
-												className: "ml-2 text-gray-700",
-												children: "人语"
-											})]
-										}), (0, l.jsxs)("label", {
-											htmlFor: "dog",
-											className: "inline-flex items-center",
-											children: [(0, l.jsx)("input", {
-												id: "dog",
-												type: "radio",
-												className: "h-4 w-4 text-blue-600",
-												name: "language",
-												value: "dog",
-												checked: o,
-												onChange: () => {
-													i(!0), h()
-												}
-											}), (0, l.jsx)("span", {
-												className: "ml-2 text-gray-700",
-												children: "尊嘟语"
-											})]
-										})]
-									})]
-								}), (0, l.jsxs)("div", {
-									children: [(0, l.jsx)("label", {
-										htmlFor: "inputText",
-										className: "block text-sm font-medium text-gray-700",
-										children: o ? "请输入人语" : "请输入尊嘟语"
-									}), (0, l.jsxs)("div", {
-										className: "mt-1",
-										children: [(0, l.jsx)("textarea", {
-											id: "inputText",
-											name: "inputText",
-											rows: "3",
-											className: "shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md ".concat(u ? "border-red-500" : ""),
-											placeholder: o ? "请输入人语" : "请输入尊嘟语",
-											value: e,
-											onChange: e => {
-												s(e.target.value)
-											}
-										}), u && (0, l.jsx)("p", {
-											className: "text-red-500 text-sm mt-1",
-											children: "你输入的是假嘟语，请重新输入"
-										})]
-									})]
-								}), (0, l.jsx)("div", {
-									children: (0, l.jsx)("button", {
-										type: "button",
-										className: "w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ".concat("" === e.trim() ? "opacity-50 cursor-not-allowed" : ""),
-										onClick: () => {
-											try {
-												if (!o && !r.Z.isZdjd(e.trim())) throw Error("输入的是假嘟语，请重新输入");
-												let s = o ? r.Z.encode(e) : r.Z.decode(e.trim());
-												n(s), m(!1), x(!1)
-											} catch (e) {
-												m(!1), x(!0), s(""), n("")
-											}
-										},
-										disabled: "" === e.trim(),
-										children: "翻译"
-									})
-								}), "" !== t && (0, l.jsxs)("div", {
-									className: "space-y-2",
-									children: [(0, l.jsx)("label", {
-										htmlFor: "outputText",
-										className: "block text-sm font-medium text-gray-700",
-										children: o ? "翻译结果" : "尊嘟假嘟语"
-									}), (0, l.jsxs)("div", {
-										className: "relative",
-										children: [(0, l.jsx)("textarea", {
-											id: "outputText",
-											name: "outputText",
-											rows: "3",
-											className: "shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md ".concat(u ? "border-red-500" : ""),
-											readOnly: !0,
-											value: t
-										}), (0, l.jsx)("div", {
-											className: "absolute inset-y-0 right-0 flex items-center",
-											children: (0, l.jsx)("button", {
-												type: "button",
-												className: "inline-flex items-center px-3 py-1 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ".concat(d ? "bg-green-600" : "bg-gray-300"),
-												onClick: () => {
-													c()(t), m(!0), x(!1)
-												},
-												children: d ? "已复制" : "复制"
-											})
-										})]
-									})]
-								})]
-							})
-						})]
-					})
-				})
-			}
-		}
-	},
-	function(e) {
-		e.O(0, [112, 971, 596, 744], function() {
-			return e(e.s = 6012)
-		}), _N_E = e.O()
-	}
-]);
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>尊嘟假嘟翻译器 O.o</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#a855f7', // 类似图中的紫色
+                        primaryHover: '#9333ea',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* 模拟图中的柔和渐变背景 */
+        body {
+            background: linear-gradient(135deg, #fbcfe8 0%, #fff7ed 50%, #fef08a 100%);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        /* 自定义滚动条 */
+        textarea::-webkit-scrollbar {
+            width: 8px;
+        }
+        textarea::-webkit-scrollbar-thumb {
+            background-color: #e5e7eb;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col justify-center items-center py-12 px-4 sm:px-6 lg:px-8">
+
+    <div class="bg-white py-10 px-8 shadow-2xl rounded-2xl w-full max-w-lg transition-all duration-300">
+        
+        <div class="text-center mb-10">
+            <h1 class="text-3xl font-bold text-gray-800 tracking-tight">尊嘟假嘟翻译器 O.o</h1>
+        </div>
+
+        <div class="space-y-6">
+            
+            <div class="flex justify-center space-x-8 pb-2">
+                <label class="cursor-pointer flex items-center group">
+                    <input type="radio" name="language" value="human" class="w-5 h-5 text-primary border-gray-300 focus:ring-primary transition duration-150 ease-in-out">
+                    <span class="ml-2 text-gray-700 font-medium group-hover:text-primary transition-colors">人语</span>
+                </label>
+                <label class="cursor-pointer flex items-center group">
+                    <input type="radio" name="language" value="dog" checked class="w-5 h-5 text-primary border-gray-300 focus:ring-primary transition duration-150 ease-in-out">
+                    <span class="ml-2 text-gray-700 font-medium group-hover:text-primary transition-colors">尊嘟语</span>
+                </label>
+            </div>
+
+            <div>
+                <div class="flex justify-between items-end mb-2">
+                    <label for="inputText" class="block text-sm font-semibold text-gray-600 pl-1">
+                        请输入内容
+                    </label>
+                    <button type="button" id="pasteBtn" class="text-xs font-medium text-primary hover:text-primaryHover bg-purple-50 hover:bg-purple-100 px-2 py-1 rounded-md transition-colors flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+                        读取剪贴板
+                    </button>
+                </div>
+                
+                <div class="relative rounded-xl shadow-sm">
+                    <textarea id="inputText" name="inputText" rows="4"
+                        class="block w-full rounded-xl border-gray-200 bg-gray-50 focus:bg-white focus:border-primary focus:ring-primary sm:text-sm p-4 transition-all duration-200 ease-in-out resize-none outline-none border hover:border-gray-300"
+                        placeholder="在此输入想要翻译的人话..."></textarea>
+                </div>
+            </div>
+
+            <div>
+                <button type="button"
+                    class="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-md text-base font-medium text-white bg-primary hover:bg-primaryHover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-200 transform active:scale-[0.98]">
+                    翻 译
+                </button>
+            </div>
+
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-gray-100">
+            <div class="text-xs text-gray-400 space-y-2 text-center leading-relaxed">
+                <p>PS: 这是一个尊嘟语和人语互相翻译的工具。</p>
+                <p>
+                    原作者: SnailSword | 源代码: <a href="https://github.com/fuzipei/zundu" target="_blank" class="text-primary hover:underline">GitHub</a>
+                </p>
+                <p>
+                    Bug反馈: <a href="mailto:help@richdev.cn" class="text-primary hover:underline">help@richdev.cn</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('pasteBtn').addEventListener('click', async () => {
+            try {
+                const text = await navigator.clipboard.readText();
+                const textarea = document.getElementById('inputText');
+                
+                textarea.value = text;
+                
+                // 触发事件以适配现代前端框架
+                const inputEvent = new Event('input', { bubbles: true });
+                textarea.dispatchEvent(inputEvent);
+                
+                // 视觉反馈：闪烁紫色边框
+                textarea.classList.add('ring-2', 'ring-primary', 'bg-white');
+                textarea.classList.remove('bg-gray-50');
+                
+                setTimeout(() => {
+                    textarea.classList.remove('ring-2', 'ring-primary', 'bg-white');
+                    textarea.classList.add('bg-gray-50');
+                }, 300);
+                
+            } catch (err) {
+                console.error('无法读取剪贴板:', err);
+                alert('请允许浏览器访问剪贴板权限');
+            }
+        });
+    </script>
+</body>
+</html>
